@@ -1,0 +1,152 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+}
+
+/****************** CSS INDEX *******************/
+.body {
+	background-image:
+		url(https://res.cloudinary.com/ramatineo/image/upload/v1669752613/RPGon/images/fondos/fondoMonta%C3%B1oso_lm8mbt.jpg);
+	background-repeat: repeat-y;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+
+
+.card, .list-group-item {
+	background: rgba(34, 34, 34, 0.534);
+	color: whitesmoke;
+}
+
+.list-group-flush>.list-group-item {
+	padding: 7px;
+}
+
+.card {
+	width: 30vw;
+	margin: 4px;
+	padding: 1px;
+}
+
+.card-body {
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card img {
+	max-width: 30vw;
+	height: 35%
+}
+
+.clases {
+	display: flex;
+}
+
+.navbar {
+	display: flex;
+	background-color: rgba(255, 246, 246, 0.055);
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.navbar div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.h1 {
+	display: flex;
+	justify-content: center;
+}
+
+.main {
+	background-color: rgba(247, 233, 233, 0.062);
+	display: flex;
+	justify-content: flex-start;
+	margin: 5px;
+	border-radius: 15px;
+	flex-direction: column;
+	align-items: center;
+}
+
+.titulo {
+	border-bottom: 1px black solid;
+	display: block;
+}
+
+.titulo2 {
+	color: whitesmoke;
+}
+
+.error {
+	color: whitesmoke;
+	border: 2px solid red;
+	border-radius: 6px;
+	background-color: rgb(175, 41, 41);
+}
+
+.a-active {
+	font-weight: 600;
+	border: none;
+	border-radius: 10px;
+	padding: 0.5vh;
+	display: block;
+	text-decoration: none;
+	background-color: #429a5859;
+}
+
+.a-active:hover, .danger:hover {
+	color: White;
+	transition: 0.3s;
+}
+
+.a-fight{
+		font-weight: 600;
+	border: none;
+	border-radius: 10px;
+	padding: 0.5vh;
+	display: block;
+	text-decoration: none;
+background-color: #9a4242a1;
+}
+
+.btn-form{
+	margin:12px;
+	display: flex;
+    justify-content: center;
+    color:whitesmoke;
+    background: radial-gradient(white, );
+}
+
+.select-pj{
+	    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.login{
+	display: flex;
+    margin-bottom: 1rem !important;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.danger{
+    display: flex;
+    background-color: #ff00004d;
+    border-radius: 10px;
+    justify-content: center;
+    color:black;
+      font: caption
+}
+@media ( min-width : 1024px) {
+	.card {
+		width: 18rem;
+	}
+}
