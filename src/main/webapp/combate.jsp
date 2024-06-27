@@ -18,10 +18,10 @@
 					<li class="list-group-item">Defensa: ${p.deff}</li>
 				</ul>
 
-				<!-- 			TODO  Hacer pag de combate. Insertar card de enemigos y propia y ver como programar el combate -->
 
 			</div>
 		</c:forEach>
+	</div>
 		<div class="select-pj">
 			<c:forEach items="${personajes}" var="p">
 				<div class="card">
@@ -41,7 +41,6 @@
 				</div>
 			</c:forEach>
 		</div>
-	</div>
 
 </main>
 <!--------------- FOOTER -------------->
