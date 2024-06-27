@@ -18,7 +18,10 @@ public class CombateServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.setAttribute("enemigos", RPJav.obtenerTodos());
+		
+		Long numero = (long) ((int) (Math.random() * 3) + 1);
+		
+		request.setAttribute("enemigos", RPJav.obtenerUno(numero));
 		String user = (String) request.getSession().getAttribute("user");
 		String sId = request.getParameter("id");
 		Long id = Long.parseLong(sId);

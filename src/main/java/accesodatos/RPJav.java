@@ -14,6 +14,7 @@ public class RPJav {
 	private static final String USER = "root";
 	private static final String PASS = "1234";
 	private static final String SQL_SELECT = "SELECT * FROM enemigos";
+	private static final String SQL_SELECT_ONE = "SELECT * FROM enemigos WHERE id=?";
 	static {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -28,6 +29,25 @@ public class RPJav {
 		try (Connection con = DriverManager.getConnection(URL, USER, PASS);
 				PreparedStatement pst = con.prepareStatement(SQL_SELECT);
 				ResultSet rs = pst.executeQuery()) {
+			Enemigos enemigo;
+			while (rs.next()) {
+				enemigo = new Enemigos(rs.getLong("id"), rs.getString("img"), rs.getString("tipo"), rs.getString("name"),
+						rs.getInt("vida"), rs.getInt("atk"), rs.getInt("deff"));
+				enemigos.add(enemigo);
+			}
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		return enemigos;
+	}
+	public static ArrayList<Enemigos> obtenerUno(Long id) {
+		ArrayList<Enemigos> enemigos = new ArrayList<>();
+		try (Connection con = DriverManager.getConnection(URL, USER, PASS);
+				PreparedStatement pst = con.prepareStatement(SQL_SELECT_ONE);
+				) {
+			pst.setLong(1, id);
+			ResultSet rs = pst.executeQuery();
 			Enemigos enemigo;
 			while (rs.next()) {
 				enemigo = new Enemigos(rs.getLong("id"), rs.getString("img"), rs.getString("tipo"), rs.getString("name"),
